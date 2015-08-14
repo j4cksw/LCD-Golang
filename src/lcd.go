@@ -26,5 +26,9 @@ func getSecondLineForNumber(number int) string {
     if number ==1 {
         return "| || |  |"
     }
-    return "| || || |"
+    return "| || |" + getSecondLineRightDigitForNumber(0)
+}
+
+func getSecondLineRightDigitForNumber(number int) string {
+    return "| |"
 }
