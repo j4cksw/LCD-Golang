@@ -13,11 +13,14 @@ func getThirdLineForNumber(number int) string {
 
 func getThirdLineRightDigitForNumber(number int) string {
     if number == 1 {
-        return "  |"
+        return getThirdLineLeftPiece(1) + " |"
     }
     return getThirdLineLeftPiece(0) + "_|"
 }
 
 func getThirdLineLeftPiece(number int) string {
+    if number == 1 {
+        return " "
+    }
     return "|"
 }
