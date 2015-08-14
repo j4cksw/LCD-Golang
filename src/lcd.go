@@ -8,12 +8,16 @@ func Render(number int) string {
 }
 
 func getThirdLineForNumber(number int) string {
-    return "|_||_|" + getThirdLineRightDightForNumber(number)
+    return "|_||_|" + getThirdLineRightDigitForNumber(number)
 }
 
-func getThirdLineRightDightForNumber(number int) string {
+func getThirdLineRightDigitForNumber(number int) string {
     if number == 1 {
         return "  |"
     }
-    return "|_|"
+    return getThirdLineLeftPiece(0) + "_|"
+}
+
+func getThirdLineLeftPiece(number int) string {
+    return "|"
 }
