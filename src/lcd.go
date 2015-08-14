@@ -1,5 +1,5 @@
 package lcd
 
 func Render(number int) string {
-    return ""
+    return " -  -  - " + "\n" + "| || || |" + "\n" + "|_||_||_|"
 }
