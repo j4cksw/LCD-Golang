@@ -2,7 +2,7 @@ package lcd
 
 import "testing"
 
-func Test_render_000_correctly(t *testing.T) {
+func Test_render_000(t *testing.T) {
     result := Render(000)
 
     expectedResult := " -  -  - " + "\n" + "| || || |" + "\n" + "|_||_||_|"
@@ -11,7 +11,7 @@ func Test_render_000_correctly(t *testing.T) {
     }
 }
 
-func Test_render_001_correctly(t *testing.T) {
+func Test_render_001(t *testing.T) {
     result := Render(001)
 
     expectedResult := " -  -   " + "\n" + "| || |  |" + "\n" + "|_||_|  |"
