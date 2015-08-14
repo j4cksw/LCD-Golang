@@ -27,10 +27,7 @@ func getSecondLineForNumber(number int) string {
 }
 
 func getSecondLineRightDigitForNumber(number int) string {
-    if number == 1 {
-        return getSecondLineRightDigitLeftForNumber(1) + " |"
-    }
-    return getSecondLineRightDigitLeftForNumber(0) + " |"
+    return getSecondLineRightDigitLeftForNumber(number) + " |"
 }
 
 func getSecondLineRightDigitLeftForNumber(number int) string {
