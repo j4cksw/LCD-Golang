@@ -2,7 +2,14 @@ package lcd
 
 func Render(number int) string {
     if number == 1 {
-        return " -  -   " + "\n" + "| || |  |" + "\n" + "|_||_|  |"
+        return getFirstLineForNumber(1) + "\n" + "| || |  |" + "\n" + "|_||_|  |"
     }
-    return " -  -  - " + "\n" + "| || || |" + "\n" + "|_||_||_|"
+    return getFirstLineForNumber(0) + "\n" + "| || || |" + "\n" + "|_||_||_|"
+}
+
+func getFirstLineForNumber(number int) string {
+    if number == 1 {
+        return " -  -   "
+    }
+    return " -  -  - "
 }
