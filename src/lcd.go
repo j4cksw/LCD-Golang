@@ -8,8 +8,15 @@ func Render(number int) string {
 }
 
 func getFirstLineForNumber(number int) string {
+    // if number == 1 {
+    //     return " -  -   "
+    // }
+    return " -  - " + getFirstLineRightDigitForNumber(number)
+}
+
+func getFirstLineRightDigitForNumber(number int) string {
     if number == 1 {
-        return " -  -   "
+        return "   "
     }
-    return " -  -  - "
+    return " - "
 }

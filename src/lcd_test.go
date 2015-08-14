@@ -14,7 +14,7 @@ func Test_render_000(t *testing.T) {
 func Test_render_001(t *testing.T) {
     result := Render(001)
 
-    expectedResult := " -  -   " + "\n" + "| || |  |" + "\n" + "|_||_|  |"
+    expectedResult := " -  -    " + "\n" + "| || |  |" + "\n" + "|_||_|  |"
     if result != expectedResult {
         t.Errorf("Expected \n%s but got \n%s", expectedResult, result)
     }
