@@ -7,7 +7,7 @@ func (l *SecondLine) RenderForValue(value int) string {
 }
 
 func (l *SecondLine) getSecondLineRightDigitForNumber(number int) string {
-    return l.getSecondLineRightDigitLeftForNumber(number) + l.getSecondLineCenterSegment(number) + "|"
+    return l.getSecondLineRightDigitLeftForNumber(number) + l.getSecondLineCenterSegment(number) + l.getSecondLineRightSegment(number)
 }
 
 func (l *SecondLine) getSecondLineRightDigitLeftForNumber(number int) string {
@@ -18,8 +18,15 @@ func (l *SecondLine) getSecondLineRightDigitLeftForNumber(number int) string {
 }
 
 func (l *SecondLine) getSecondLineCenterSegment(number int) string {
-    if number == 2 || number == 3 || number == 4 {
+    if number == 2 || number == 3 || number == 4 || number == 5{
         return "_"
     }
     return " "
+}
+
+func (l *SecondLine) getSecondLineRightSegment(number int) string {
+    if number == 5 {
+        return " "
+    }
+    return "|"
 }
