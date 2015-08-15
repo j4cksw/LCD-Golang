@@ -18,7 +18,7 @@ func (l *SecondLine) getSecondLineRightDigitLeftForNumber(number int) string {
 }
 
 func (l *SecondLine) getSecondLineCenterSegment(number int) string {
-    if number == 2 || number == 3 {
+    if number == 2 || number == 3 || number == 4 {
         return "_"
     }
     return " "

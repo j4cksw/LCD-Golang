@@ -11,7 +11,7 @@ func (l *FirstLine) getFirstLineRightDigitForNumber(number int) string {
 }
 
 func (l *FirstLine) getFirstLineRightDigitCenterForNumber(number int) string {
-    if number == 1 {
+    if number == 1 || number == 4{
         return " "
     }
     return "-"

@@ -16,14 +16,14 @@ func (l *ThirdLine) getThirdLineRightDigitForNumber(number int) string {
 }
 
 func (l *ThirdLine) getThirdLineLeftSegment(number int) string {
-    if number == 1 || number == 3 {
+    if number == 1 || number == 3 || number == 4{
         return " "
     }
     return "|"
 }
 
 func (l *ThirdLine) getThirdLineCenterSegment(number int) string {
-    if number == 1 {
+    if number == 1 || number == 4{
         return " "
     }
     return "_"
