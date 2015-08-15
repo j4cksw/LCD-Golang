@@ -7,19 +7,26 @@ func (l *ThirdLine) RenderForValue(number int) string {
 }
 
 func (l *ThirdLine) getThirdLineRightDigitForNumber(number int) string {
-    return l.getThirdLineLeftPiece(number) + l.getThirdLineCenterPiece(number) + "|"
+    return l.getThirdLineLeftSegment(number) + l.getThirdLineCenterSegment(number) + l.getThirdLineRightSegment(number)
 }
 
-func (l *ThirdLine) getThirdLineLeftPiece(number int) string {
+func (l *ThirdLine) getThirdLineLeftSegment(number int) string {
     if number == 1 {
         return " "
     }
     return "|"
 }
 
-func (l *ThirdLine) getThirdLineCenterPiece(number int) string {
+func (l *ThirdLine) getThirdLineCenterSegment(number int) string {
     if number == 1 {
         return " "
     }
     return "_"
+}
+
+func (l *ThirdLine) getThirdLineRightSegment(number int) string {
+    if number == 2 {
+        return " "
+    }
+    return "|"
 }

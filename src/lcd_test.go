@@ -19,3 +19,12 @@ func Test_render_001(t *testing.T) {
         t.Errorf("Expected \n%s but got \n%s", expectedResult, result)
     }
 }
+
+func Test_render_002(t *testing.T) {
+    result := Render(002)
+
+    expectedResult := " -  -  - " + "\n" + "| || | _|" + "\n" + "|_||_||_ " + "\n"
+    if result != expectedResult {
+        t.Errorf("Expected \n%s but got \n%s", expectedResult, result)
+    }
+}
