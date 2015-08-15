@@ -8,7 +8,7 @@ var expecteds = map[int]string {
     002: " -  -  - " + "\n" + "| || | _|" + "\n" + "|_||_||_ " + "\n",
 }
 
-func Test_render_000(t *testing.T) {
+func Test_render(t *testing.T) {
     for value, expected := range expecteds {
         if Render(value) != expected {
             t.Errorf("Expected \n%s but got %s", expected, Render(value))
