@@ -2,9 +2,9 @@ package lcd
 
 import "fmt"
 
-func Render(number int) string {
-    lines := []Line{ &FirstLine{}, &SecondLine{}, &ThirdLine{} }
+var lines = []Line{ &FirstLine{}, &SecondLine{}, &ThirdLine{} }
 
+func Render(number int) string {
     result := ""
     for _, line := range lines {
         result = fmt.Sprintf("%s%s\n", result, line.RenderForValue(number))
