@@ -2,5 +2,6 @@ package lcd
 
 func Render(number int) string {
     firstLine := &FirstLine{}
-    return firstLine.RenderForValue(number) + "\n" + getSecondLineForNumber(number) + "\n" + getThirdLineForNumber(number)
+    secondLine := &SecondLine{}
+    return firstLine.RenderForValue(number) + "\n" + secondLine.RenderForValue(number) + "\n" + getThirdLineForNumber(number)
 }
