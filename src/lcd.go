@@ -1,8 +1,14 @@
 package lcd
 
+import "fmt"
+
 func Render(number int) string {
-    firstLine := &FirstLine{}
-    secondLine := &SecondLine{}
-    thirdLine := &ThirdLine{}
-    return firstLine.RenderForValue(number) + "\n" + secondLine.RenderForValue(number) + "\n" + thirdLine.RenderForValue(number)
+    lines := []Line{ &FirstLine{}, &SecondLine{}, &ThirdLine{} }
+
+    result := ""
+    for _, line := range lines {
+        result = fmt.Sprintf("%s%s\n", result, line.RenderForValue(number))
+    }
+
+    return result
 }
