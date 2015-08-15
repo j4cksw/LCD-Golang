@@ -11,14 +11,14 @@ func (l *SecondLine) getSecondLineRightDigitForNumber(number int) string {
 }
 
 func (l *SecondLine) getSecondLineRightDigitLeftForNumber(number int) string {
-    if number == 1 || number == 2 {
+    if number == 1 || number == 2 || number == 3 {
         return " "
     }
     return "|"
 }
 
 func (l *SecondLine) getSecondLineCenterSegment(number int) string {
-    if number == 2 {
+    if number == 2 || number == 3 {
         return "_"
     }
     return " "
