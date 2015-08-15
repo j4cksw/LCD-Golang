@@ -2,12 +2,15 @@ package lcd
 
 import "testing"
 
-func Test_render_000(t *testing.T) {
-    result := Render(000)
+var expecteds = map[int]string {
+    000 : " -  -  - " + "\n" + "| || || |" + "\n" + "|_||_||_|" + "\n",
+}
 
-    expectedResult := " -  -  - " + "\n" + "| || || |" + "\n" + "|_||_||_|" + "\n"
-    if result != expectedResult {
-        t.Errorf("Expected \n%s but got %s", expectedResult, result)
+func Test_render_000(t *testing.T) {
+    for value, expected := range expecteds {
+        if Render(value) != expected {
+            t.Errorf("Expected \n%s but got %s", expected, Render(value))
+        }
     }
 }
 
