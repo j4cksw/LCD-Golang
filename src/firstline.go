@@ -11,11 +11,7 @@ func (l *FirstLine) RenderForValue(value int) string {
 }
 
 func (l *FirstLine) getFirstLineRightDigitForNumber(number int) string {
-    return " " + l.getFirstLineRightDigitCenterForNumber(number) + " "
-}
-
-func (l *FirstLine) getFirstLineRightDigitCenterForNumber(number int) string {
-    return NewFirstLineCenterSegment().RenderForNumber(number)
+    return " " + NewFirstLineCenterSegment().RenderForNumber(number) + " "
 }
 
 func NewFirstLineCenterSegment() Segment{
