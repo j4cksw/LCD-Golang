@@ -7,7 +7,7 @@ func NewFirstLine() Line {
 }
 
 func (l *FirstLine) RenderForValue(value int) string {
-    return " -  - " + l.getFirstLineRightDigitForNumber(value)
+    return " _  _ " + l.getFirstLineRightDigitForNumber(value)
 }
 
 func (l *FirstLine) getFirstLineRightDigitForNumber(number int) string {
