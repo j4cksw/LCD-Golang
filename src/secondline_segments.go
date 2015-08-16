@@ -23,6 +23,7 @@ func NewSecondLineRightSegment() Segment {
 	return &SideSegment{
 		map[int]bool{
             5:true,
+			6:true,
         },
 	}
 }
