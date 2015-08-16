@@ -2,7 +2,7 @@ package lcd
 
 func NewFirstLine() Line {
     return Line{
-        " _  _ ",
+        " _ ",
         []Segment{
             NewFirstLineLeftSegment(),
             NewFirstLineCenterSegment(),

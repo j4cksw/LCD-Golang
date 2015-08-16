@@ -2,7 +2,7 @@ package lcd
 
 func NewThirdLine() Line {
     return Line{
-        "|_||_|",
+        "|_|",
         []Segment{
             NewThirdLineLeftSegment(),
             NewThirdLineCenterSegment(),
