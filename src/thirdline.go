@@ -12,9 +12,5 @@ func (l *ThirdLine) getThirdLineRightDigitForNumber(number int) string {
     return fmt.Sprintf("%s%s%s",
         NewThirdLineLeftSegment().RenderForNumber(number),
         NewThirdLineCenterSegment().RenderForNumber(number),
-        l.getThirdLineRightSegment(number))
-}
-
-func (l *ThirdLine) getThirdLineRightSegment(number int) string {
-    return NewThirdLineRightSegment().RenderForNumber(number)
+        NewThirdLineRightSegment().RenderForNumber(number))
 }
