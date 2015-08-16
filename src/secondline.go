@@ -7,7 +7,8 @@ type SecondLine struct {
 }
 
 func NewSecondLine() Line {
-    return &SecondLine{
+    return &ConcreteLine{
+        "| || |",
         []Segment{
             NewSecondLineLeftSegment(),
             NewSecondLineCenterSegment(),
@@ -22,7 +23,7 @@ func (l *SecondLine) RenderForValue(value int) string {
 
 func (l *SecondLine) getSecondLineRightDigitForNumber(number int) string {
     return fmt.Sprintf("%s%s%s",
-        NewSecondLineLeftSegment().RenderForNumber(number),
-        NewSecondLineCenterSegment().RenderForNumber(number),
-        NewSecondLineRightSegment().RenderForNumber(number))
+        l.segments[0].RenderForNumber(number),
+        l.segments[1].RenderForNumber(number),
+        l.segments[2].RenderForNumber(number))
 }
