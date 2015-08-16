@@ -11,12 +11,8 @@ func (l *SecondLine) RenderForValue(value int) string {
 func (l *SecondLine) getSecondLineRightDigitForNumber(number int) string {
     return fmt.Sprintf("%s%s%s",
         NewSecondLineLeftSegment().RenderForNumber(number),
-        l.getSecondLineCenterSegment(number),
+        NewSecondLineCenterSegment().RenderForNumber(number),
         l.getSecondLineRightSegment(number))
-}
-
-func (l *SecondLine) getSecondLineCenterSegment(number int) string {
-    return NewSecondLineCenterSegment().RenderForNumber(number)
 }
 
 func (l *SecondLine) getSecondLineRightSegment(number int) string {
