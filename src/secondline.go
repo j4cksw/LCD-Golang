@@ -15,10 +15,11 @@ func (l *SecondLine) getSecondLineRightDigitLeftForNumber(number int) string {
 }
 
 func (l *SecondLine) getSecondLineCenterSegment(number int) string {
-    if number == 2 || number == 3 || number == 4 || number == 5{
-        return "_"
-    }
-    return " "
+    // if number == 2 || number == 3 || number == 4 || number == 5{
+    //     return "_"
+    // }
+    // return " "
+    return NewSecondLineCenterSegment().RenderForNumber(number)
 }
 
 func (l *SecondLine) getSecondLineRightSegment(number int) string {
