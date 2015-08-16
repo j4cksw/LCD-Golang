@@ -11,10 +11,7 @@ func (l *SecondLine) getSecondLineRightDigitForNumber(number int) string {
 }
 
 func (l *SecondLine) getSecondLineRightDigitLeftForNumber(number int) string {
-    if number == 1 || number == 2 || number == 3 {
-        return " "
-    }
-    return "|"
+    return NewSecondLineLeftSegment().RenderForNumber(number)
 }
 
 func (l *SecondLine) getSecondLineCenterSegment(number int) string {
