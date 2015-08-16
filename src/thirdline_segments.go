@@ -8,6 +8,7 @@ func NewThirdLineLeftSegment() Segment{
             4: true,
             5: true,
             7: true,
+            9: true,
         },
     }
 }
@@ -18,6 +19,7 @@ func NewThirdLineCenterSegment() Segment {
             1: true,
             4: true,
             7: true,
+            9: true,
         },
     }
 }
