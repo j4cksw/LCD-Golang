@@ -19,8 +19,5 @@ func (l *SecondLine) getSecondLineCenterSegment(number int) string {
 }
 
 func (l *SecondLine) getSecondLineRightSegment(number int) string {
-    if number == 5 {
-        return " "
-    }
-    return "|"
+    return NewSecondLineRightSegment().RenderForNumber(number)
 }
