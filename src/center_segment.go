@@ -1,5 +1,10 @@
 package lcd
 
+const (
+    CENTER_ON = "_"
+    CENTER_OFF = " "
+)
+
 type CenterSegment struct {
     includes map[int]bool
 }
