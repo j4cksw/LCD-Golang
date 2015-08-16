@@ -20,10 +20,7 @@ func (l *ThirdLine) getThirdLineLeftSegment(number int) string {
 }
 
 func (l *ThirdLine) getThirdLineCenterSegment(number int) string {
-    if number == 1 || number == 4{
-        return CENTER_OFF
-    }
-    return CENTER_ON
+    return NewThirdLineCenterSegment().RenderForNumber(number)
 }
 
 func (l *ThirdLine) getThirdLineRightSegment(number int) string {
