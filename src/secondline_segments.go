@@ -13,8 +13,16 @@ func NewSecondLineLeftSegment() Segment {
 func NewSecondLineCenterSegment() Segment {
 	return &CenterSegment{
 		map[int]bool{
-            0: true,
+			0: true,
 			1: true,
 		},
+	}
+}
+
+func NewSecondLineRightSegment() Segment {
+	return &SideSegment{
+		map[int]bool{
+            5:true,
+        },
 	}
 }
