@@ -10,7 +10,7 @@ type Line struct {
 const MAX_DIGIT = 3
 
 func (l *Line) RenderForValue(value int) string {
-    result := ""
+    var result string
     for i := 0; i < MAX_DIGIT; i++ {
         digit := value%10
         value = value/10
