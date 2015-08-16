@@ -33,7 +33,7 @@ func (l *ThirdLine) getThirdLineCenterSegment(number int) string {
     if number == 1 || number == 4{
         return CENTER_OFF
     }
-    return "_"
+    return CENTER_ON
 }
 
 func (l *ThirdLine) getThirdLineRightSegment(number int) string {
