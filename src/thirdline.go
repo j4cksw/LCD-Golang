@@ -27,8 +27,5 @@ func (l *ThirdLine) getThirdLineCenterSegment(number int) string {
 }
 
 func (l *ThirdLine) getThirdLineRightSegment(number int) string {
-    if number == 2 {
-        return SIDE_OFF
-    }
-    return SIDE_ON
+    return NewThirdLineRightSegment().RenderForNumber(number)
 }
