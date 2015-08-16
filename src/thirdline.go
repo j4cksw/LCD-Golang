@@ -15,18 +15,8 @@ func (l *ThirdLine) getThirdLineRightDigitForNumber(number int) string {
         l.getThirdLineRightSegment(number))
 }
 
-var left = map[int]bool {
-    1: true,
-    3: true,
-    4: true,
-    5: true,
-}
-
 func (l *ThirdLine) getThirdLineLeftSegment(number int) string {
-    if left[number]{
-        return SIDE_OFF
-    }
-    return SIDE_ON
+    return NewThirdLineLeftSegment().RenderForNumber(number)
 }
 
 func (l *ThirdLine) getThirdLineCenterSegment(number int) string {
