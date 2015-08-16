@@ -1,7 +1,7 @@
 package lcd
 
 func NewThirdLine() Line {
-    return &ConcreteLine{
+    return Line{
         "|_||_|",
         []Segment{
             NewThirdLineLeftSegment(),
