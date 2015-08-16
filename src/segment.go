@@ -1,8 +1,6 @@
 package lcd
 
 const (
-    SIDE_ON = "|"
-    SIDE_OFF = " "
     CENTER_ON = "_"
     CENTER_OFF = " "
 )

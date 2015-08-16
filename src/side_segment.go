@@ -1,5 +1,10 @@
 package lcd
 
+const (
+    SIDE_ON = "|"
+    SIDE_OFF = " "
+)
+
 type SideSegment struct {
     includes map[int]bool
 }
