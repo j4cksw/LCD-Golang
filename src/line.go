@@ -2,10 +2,6 @@ package lcd
 
 import "fmt"
 
-// type Line interface {
-//     RenderForValue(value int) string
-// }
-
 type Line struct {
     leftValue string
     segments []Segment
