@@ -3,7 +3,14 @@ package lcd
 type FirstLine struct {}
 
 func NewFirstLine() Line {
-    return &FirstLine{}
+    return &ConcreteLine{
+        " _  _ ",
+        []Segment{
+            NewFirstLineLeftSegment(),
+            NewFirstLineCenterSegment(),
+            NewFirstLineRightSegment(),
+        },
+    }
 }
 
 func (l *FirstLine) RenderForValue(value int) string {
