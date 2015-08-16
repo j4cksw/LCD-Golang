@@ -40,5 +40,5 @@ func (l *ThirdLine) getThirdLineRightSegment(number int) string {
     if number == 2 {
         return SIDE_OFF
     }
-    return "|"
+    return SIDE_ON
 }
