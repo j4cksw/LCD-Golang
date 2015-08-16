@@ -8,9 +8,10 @@ type Line struct {
 }
 
 func (l *Line) RenderForValue(value int) string {
-    leftValue := value % 10
+    rightValue := value % 10
     value = value/10
-    return l.leftValue + l.getRightDigitForNumber(value%10) + l.getRightDigitForNumber(leftValue)
+    centerValue := value % 10
+    return l.leftValue + l.getRightDigitForNumber(centerValue) + l.getRightDigitForNumber(rightValue)
 }
 
 func (l *Line) getRightDigitForNumber(number int) string {
