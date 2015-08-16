@@ -3,7 +3,6 @@ package lcd
 import "fmt"
 
 type Line struct {
-    leftValue string
     segments []Segment
 }
 
