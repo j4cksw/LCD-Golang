@@ -15,8 +15,15 @@ func (l *ThirdLine) getThirdLineRightDigitForNumber(number int) string {
         l.getThirdLineRightSegment(number))
 }
 
+var left = map[int]bool {
+    1: true,
+    3: true,
+    4: true,
+    5: true,
+}
+
 func (l *ThirdLine) getThirdLineLeftSegment(number int) string {
-    if number == 1 || number == 3 || number == 4 || number == 5{
+    if left[number]{
         return " "
     }
     return "|"
