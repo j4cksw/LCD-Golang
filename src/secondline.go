@@ -2,7 +2,19 @@ package lcd
 
 import "fmt"
 
-type SecondLine struct {}
+type SecondLine struct {
+    segments []Segment
+}
+
+func NewSecondLine() Line {
+    return &SecondLine{
+        []Segment{
+            NewSecondLineLeftSegment(),
+            NewSecondLineCenterSegment(),
+            NewSecondLineRightSegment(),
+        },
+    }
+}
 
 func (l *SecondLine) RenderForValue(value int) string {
     return "| || |" + l.getSecondLineRightDigitForNumber(value)

@@ -2,7 +2,7 @@ package lcd
 
 import "fmt"
 
-var lines = []Line{ &FirstLine{}, &SecondLine{}, NewThirdLine() }
+var lines = []Line{ &FirstLine{}, NewSecondLine(), NewThirdLine() }
 
 func Render(number int) string {
     result := ""
