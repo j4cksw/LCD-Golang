@@ -2,6 +2,10 @@ package lcd
 
 type FirstLine struct {}
 
+func NewFirstLine() Line {
+    return &FirstLine{}
+}
+
 func (l *FirstLine) RenderForValue(value int) string {
     return " -  - " + l.getFirstLineRightDigitForNumber(value)
 }
