@@ -7,9 +7,11 @@ type Line struct {
     segments []Segment
 }
 
+const MAX_DIGIT = 3
+
 func (l *Line) RenderForValue(value int) string {
     result := ""
-    for i := 0; i < 3; i++ {
+    for i := 0; i < MAX_DIGIT; i++ {
         digit := value%10
         value = value/10
 
