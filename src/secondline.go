@@ -1,5 +1,7 @@
 package lcd
 
+import "fmt"
+
 type SecondLine struct {}
 
 func (l *SecondLine) RenderForValue(value int) string {
@@ -7,11 +9,10 @@ func (l *SecondLine) RenderForValue(value int) string {
 }
 
 func (l *SecondLine) getSecondLineRightDigitForNumber(number int) string {
-    return l.getSecondLineRightDigitLeftForNumber(number) + l.getSecondLineCenterSegment(number) + l.getSecondLineRightSegment(number)
-}
-
-func (l *SecondLine) getSecondLineRightDigitLeftForNumber(number int) string {
-    return NewSecondLineLeftSegment().RenderForNumber(number)
+    return fmt.Sprintf("%s%s%s",
+        NewSecondLineLeftSegment().RenderForNumber(number),
+        l.getSecondLineCenterSegment(number),
+        l.getSecondLineRightSegment(number))
 }
 
 func (l *SecondLine) getSecondLineCenterSegment(number int) string {
