@@ -26,3 +26,7 @@ func NewFirstLineCenterSegment() Segment{
         },
     }
 }
+
+func NewFirstLineLeftSegment() Segment{
+    return &AlwaysOffSegment{}
+}
