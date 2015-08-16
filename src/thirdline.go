@@ -24,9 +24,9 @@ var left = map[int]bool {
 
 func (l *ThirdLine) getThirdLineLeftSegment(number int) string {
     if left[number]{
-        return " "
+        return SIDE_OFF
     }
-    return "|"
+    return SIDE_ON
 }
 
 func (l *ThirdLine) getThirdLineCenterSegment(number int) string {
