@@ -20,3 +20,12 @@ func (l *FirstLine) getFirstLineRightDigitCenterForNumber(number int) string {
     }
     return "-"
 }
+
+func NewFirstLineCenterSegment() Segment{
+    return &CenterSegment{
+        map[int]bool{
+            1: true,
+            4: true,
+        },
+    }
+}
