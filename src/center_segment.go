@@ -1,9 +1,6 @@
 package lcd
 
-const (
-    CENTER_ON = "_"
-    CENTER_OFF = " "
-)
+const CENTER_ON = "_"
 
 type CenterSegment struct {
     includes map[int]bool
@@ -11,7 +8,7 @@ type CenterSegment struct {
 
 func (s *CenterSegment) RenderForNumber(number int) string {
     if s.includes[number]{
-        return CENTER_OFF
+        return OFF
     }
     return CENTER_ON
 }
