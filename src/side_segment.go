@@ -1,9 +1,6 @@
 package lcd
 
-const (
-    SIDE_ON = "|"
-    SIDE_OFF = " "
-)
+const SIDE_ON = "|"
 
 type SideSegment struct {
     includes map[int]bool
@@ -11,7 +8,7 @@ type SideSegment struct {
 
 func (s *SideSegment) RenderForNumber(number int) string {
     if s.includes[number] {
-        return SIDE_OFF
+        return OFF
     }
     return SIDE_ON
 }
